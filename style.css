@@ -1,0 +1,289 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+ @font-face {
+  font-family: Shop;
+  src: url(./fonts/Fontscafe_HandShopTypography-C30_demo.ttf);
+}
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    --webkit-scrollbar :display: none;
+    font-family: arial, sans-serif;
+    transition: all .3s;
+}
+
+
+html, body, .holster {
+    height: 100%;
+    width: 100%;
+    background: url(./Bg.jpg) fixed center no-repeat;   
+    object-fit: cover;
+    background-size: cover;
+
+  }
+  
+  
+  .container {
+    overflow: auto;
+    position: relative;
+  }
+  
+
+  
+  .container.y {
+    width: 100%;
+    height: 100vh;
+    flex-flow: column nowrap;
+  }
+
+  .y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+  }
+  
+  section {
+    scroll-snap-align: center;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+
+  }
+  
+
+
+
+.center{
+  height: 100%;
+  width: 345px;
+  background-color: #fff;
+  position: fixed;
+  filter: blur(234px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ 
+}
+
+.leftDiv{
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.leftDiv:nth-child(1){
+ margin: 10% 15%;
+ justify-content: center;
+ display: flex;
+ align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  padding-left: 15%;
+}
+.image {
+  width: 500px;
+  height: 100%;
+  margin: 0 12%;
+  position: relative;
+  z-index: 2;
+flex-shrink: 0;
+
+
+
+
+}
+.image img{
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+
+}
+
+.leftDiv:nth-child(3){
+  justify-content: center;
+  display: flex;
+  align-items: center;
+ }
+
+.one{
+  width: 274px;
+height: 164px;
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 93.617px;
+  line-height: 161px;
+  color: #FFFFFF;
+  transform: rotate(-15deg) translateX(-20px);
+}
+.two{
+  width: 137px;
+  height: 125px;
+font-family: Shop;
+font-style: normal;
+font-weight: 400;
+font-size: 108.862px;
+line-height: 23px;
+
+color: #000000;
+}
+.three{
+ 
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+font-weight: 700;
+font-size: 108.862px;
+line-height: 0;
+
+color: #FFFFFF;
+}
+
+.header{
+  font-family: 'Poppins', sans-serif;
+
+  font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 118px;
+width: 500px;
+color: #FFFFFF;
+}
+
+.bio{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+font-weight: 600;
+font-size: 21px;
+line-height: 32px;
+
+color: #FFFFFF;
+}
+
+
+
+section:nth-child(odd) .two{
+  color: #EE1C25;
+}
+
+.firstSec{
+  height: 10vh;
+  width: 100%;
+
+}
+
+.tamil {
+  font-family: "Mukta Malar", sans-serif;
+}
+.cnt {
+  font-size: 3.5rem;
+  font-weight: 850;
+  letter-spacing: -2px;
+}
+footer {
+  height: 4rem;
+  width: 100%;
+  background: linear-gradient(180deg, #b55852 0%, #811d16 48.96%, #56120e 100%);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+footer header {
+  height: 100%;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #ffdf0f 0%, #7aa92a 100%);
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: black;
+  padding: 0 1rem;
+  position: absolute;
+  z-index: 2;
+}
+footer .header2 {
+  cursor: pointer;
+  height: 100%;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #ffdf0f 0%, #7aa92a 100%);
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: black;
+  padding: 0 1rem;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+footer article {
+  display: flex;
+  overflow: hidden;
+  gap: 5rem;
+  color: white;
+  font-weight: 650;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  animation: scroll 50s infinite linear;
+}
+footer article p {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+footer article p:first-child {
+  padding-left: 100vw;
+}
+footer article p:last-child {
+  padding-right: 120vw;
+}
+@keyframes scroll {
+  0% {
+    left: 0;
+    opacity: 0.1;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: -550%;
+    opacity: 0.1;
+  }
+}
+
+.vid{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.videps{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 500px;
+  width: 700px;
+  background: #fff;
+  border-radius: 20px;
+  display: none;
+}
+
+#first{
+  background: url(./images/Banner-3.jpg) center no-repeat;
+  background-size: cover;
+}
